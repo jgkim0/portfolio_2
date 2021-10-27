@@ -122,7 +122,7 @@
             <span class="lng kor">AWS</span>
             <span class="lng kor">SQL</span>
             <span class="lng kor">Spring Framework</span>
-            <br><a href="https://github.com/jgkim0/portfilo" target="_blank"><img src="resources/image/github.png" class="ghicon" alt="" align="left"><p style="margin: 9px 0 0 29px;">Github</p></a>
+            <br><a href="https://github.com/jgkim0/portfolio_2" target="_blank"><img src="resources/image/github.png" class="ghicon" alt="" align="left"><p style="margin: 9px 0 0 29px;">Github</p></a>
           </div>
         </div>
       </div>

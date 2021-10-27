@@ -118,7 +118,7 @@
     border: 1px solid;
     border-radius: 8%;
     float: right;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 	}
 	.text-center {
     text-align: center;

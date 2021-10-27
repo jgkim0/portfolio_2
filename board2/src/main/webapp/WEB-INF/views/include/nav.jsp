@@ -33,13 +33,7 @@ html{
 {
 	background-color: #2980b9;
 	}
-.white{
-	color: white;
-	font-size: 1.2em;	
-}
-.white:hover{
-	color: white;
-}
+
 .navi {
   	float: right;
  	 margin-right: 4vw;
