@@ -60,7 +60,7 @@ padding: 2px 15px 2px 15px;
 			alert("비밀번호가 일치하지 않습니다.");
 			
 		}
-		
+	
 		}
 	</script>
 	</div>

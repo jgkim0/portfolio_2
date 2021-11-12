@@ -55,4 +55,5 @@ public class BoardVO {
 		this.password = password;
 	}
 	
+	
 }

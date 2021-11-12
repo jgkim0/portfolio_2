@@ -47,6 +47,7 @@ textarea.form-control{
 		<script>
 		function pwInput(){
 		var password = document.getElementById('password').value; 
+		
 		if(document.getElementById('password').value == "") {
 			document.getElementById('password').value = "1234";
 		}

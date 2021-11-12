@@ -128,4 +128,5 @@
 		set viewCnt = viewCnt + 1 where
 		bno=#{bno}
 	</update>
+	
 </mapper>

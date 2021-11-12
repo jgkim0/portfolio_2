@@ -251,6 +251,7 @@
 		<script>
 		function replyPwInput(){
 			var rppw = document.getElementById('replyPw').value;
+			
 			if(document.getElementById('replyPw').value==""){
 				
 				document.getElementById('replyPw').value="1234";

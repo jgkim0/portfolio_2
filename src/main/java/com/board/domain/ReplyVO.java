@@ -12,6 +12,7 @@ public class ReplyVO {
 	private String password;
 	
 	
+	
 	public int getRno() {
 		return rno;
 	}
