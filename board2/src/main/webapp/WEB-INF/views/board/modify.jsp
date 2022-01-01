@@ -37,9 +37,9 @@ padding: 2px 15px 2px 15px;
 		<%@ include file="../include/nav.jsp"%>
 	</div>
 	
-	<div class="board-view">
+	<div class="board-view" >
 	<h2 style="border-bottom: 2px solid black; font-size: 1.2rem; margin-left: auto; margin-right: auto;">게시글 수정</h2>
-	<form method="post" style="margin-top: 20px; margin-bottom: 20px;">
+	<form method="post" id="boardfrm" style="margin-top: 20px; margin-bottom: 20px;">
 
 		
 		<input type="text" name="title" class="modinput" value="${view.title}" /><br /> 
@@ -50,11 +50,28 @@ padding: 2px 15px 2px 15px;
 		<br />
 
 		<div class="modbtn" style="width: max-content; margin-left: auto; margin-right: auto;">
-		<button type="submit" class="btn">완료</button>
+		<button type="button" class="btn" onclick="javascript:pwInput()">수정</button>
 		<button type="button" class="btn" onclick="history.back()">취소</button>
 		</div>
 		
 	</form>
+		<script>
+		function pwInput(){
+			var password = "${view.password}";
+			var input = prompt("비밀번호를 입력하세요. [미설정 시 초기 비밀번호 : 1234]");
+			
+		
+			if (input == password) {
+			
+				document.getElementById('boardfrm').submit();
+			}
+			else {
+				alert("비밀번호가 일치하지 않습니다.");
+			
+			}
+		
+		}
+	</script>
 	</div>
 </body>
 </html>

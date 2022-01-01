@@ -6,7 +6,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>JinGyeong's Portfolio</title>
   <link rel="stylesheet" href="resources/css/style.css">
   <link rel="stylesheet" type="text/css" href="resources/css/YouTubePopUp.css">
 	<script type="text/javascript" src="/resources/js/jquery-1.12.1.min.js"></script>

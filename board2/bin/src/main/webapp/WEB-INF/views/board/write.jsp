@@ -37,16 +37,28 @@ textarea.form-control{
 	</div>
 
 <div class="writeForm">
-	<form method="post">
+	<form method="post" id="boardfrm">
 
 		<input type="text" name="title" class="form-control" placeholder="제목"/>
 		<input type="text" name="writer" class="form-control" placeholder="작성자"  />
+		<input type="password" id="password" name="password" class="form-control" placeholder="비밀번호[미설정 가능]"  />
 		<textarea cols="50" rows="5" name="content" class="form-control contentForm" placeholder="내용"></textarea>
 		<br />
 
-		<button type="submit" class="btn btn-info">작성</button>
+		<button onclick="javascript:PwInput()" class="btn btn-info">작성</button>
 
 	</form>
+	<script>
+		function PwInput(){
+			var pw = document.getElementById('password').value;
+			if(document.getElementById('password').value==""){
+				
+				document.getElementById('password').value="1234";
+			}
+		
+		document.getElementById('boardfrm').submit();
+	};
+	</script>
 	</div>
 </body>
 </html>

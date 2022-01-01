@@ -9,6 +9,8 @@ public class ReplyVO {
 	private String writer;
 	private String content;
 	private Date regDate;
+	private String password;
+	private String replypw;
 	
 	
 	public int getRno() {
@@ -40,6 +42,18 @@ public class ReplyVO {
 	}
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getReplypw() {
+		return replypw;
+	}
+	public void setReplypw(String replypw) {
+		this.replypw = replypw;
 	}
 	
 

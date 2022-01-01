@@ -146,9 +146,26 @@
 	<div style="float:right; display: inline-block;">
 		<a href="/board/listPageSearch?num=1" class="btn blue">게시물 목록</a> 
 		<a href="/board/modify?bno=${view.bno}" class="btn blue">게시물 수정</a> 
-		<a href="/board/delete?bno=${view.bno}" class="btn red">게시물 삭제</a>
+		<a href="javascript:boardDel()" class="btn red">게시물 삭제</a>
 	</div>
 	</div>
+	<script>
+	function boardDel(){
+		var password = "${view.password}";
+		var input = prompt("비밀번호를 입력하세요. [미설정 시 초기 비밀번호: 1234]");
+			
+		
+		if (input == password) {
+			
+			location.href="/board/delete?bno=${view.bno}"
+		}
+		else {
+			alert("비밀번호가 일치하지 않습니다.");
+			
+		}
+		
+		}
+	</script>
 	<!-- 댓글 시작 -->
 
 	
@@ -181,7 +198,7 @@
 						<span style="color: #5c5c5c; font-size: 0.8rem; "><fmt:formatDate value="${reply.regDate}" pattern="yyyy-MM-dd hh:mm" /></span>
 						
 						<a href="/reply/update?rno=${reply.rno}&bno=${reply.bno}" class="reply-btn"> 수정</a> 
-						<a href="/reply/delete?rno=${reply.rno}&bno=${reply.bno}" class="reply-btn"> 삭제 </a> 
+						<a href="javascript:replyDel()" class="reply-btn"> 삭제 </a> 
 						
 						<!-- 
 						<form method="post" action="/reply/delete">
@@ -192,7 +209,23 @@
 						</form>
 						 -->
 					</p>
-					
+					<script>
+					function replyDel(){
+						var replypassword = "${reply.password}";
+						var input = prompt("비밀번호를 입력하세요. [미설정 시 초기 비밀번호: 1234]");
+							
+						
+						if (input == replypassword) {
+							
+							location.href="/reply/delete?rno=${reply.rno}&bno=${reply.bno}"
+						}
+						else {
+							alert("비밀번호가 일치하지 않습니다.");
+							
+						}
+						
+						}
+					</script>
 					<p style="padding-left: 10px;">${reply.content}</p>
 				</div>
 			</li>
@@ -201,20 +234,32 @@
 
 	<div>
 
-		<form method="post" action="/reply/write" style="display: inline-block; margin-top: 4px; width: 100%; padding-left: 10px;">
+		<form method="post" id="replyfrm" action="/reply/write" style="display: inline-block; margin-top: 4px; width: 100%; padding-left: 10px;">
 
 			<p style="margin-top: 2px;">
 				<label>댓글 작성자</label> <input type="text" name="writer">
+				<label>비밀번호</label> <input type="password" name="password" id="replyPw">
 			</p>
 			<p style="width: 100%; /* border: 1px solid red; */ smargin: auto;">
 				<textarea rows="5" cols="50" name="content" style="margin: 2px 0px 2px; width: 94%; height: 102px;"></textarea>
 			</p>
 			<p>
 				<input type="hidden" name="bno" value="${view.bno}">
-				<button type="submit">댓글 작성</button>
+				<button type="button" onclick="javascript:replyPwInput()">댓글 작성</button>
 			</p>
 		</form>
-
+		<script>
+		function replyPwInput(){
+			var rppw = document.getElementById('replyPw').value;
+			if(rppw==""){
+				
+				document.getElementById('replyPw').value="1234";
+			}
+		
+		document.getElementById('replyfrm').submit();
+	};
+	</script>
+	
 	</div>
 </div>
 	<!-- 댓글 끝 -->

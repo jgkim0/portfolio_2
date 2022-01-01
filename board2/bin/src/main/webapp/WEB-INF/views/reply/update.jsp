@@ -33,7 +33,7 @@ padding: 2px 15px 2px 15px;
 	<div class="board-view">
 	<h2 style="border-bottom: 2px solid black; font-size: 1.2rem; margin-left: auto; margin-right: auto;">댓글 수정</h2>
 	
-	<form method="post">
+	<form method="post" id="replyfrm">
 
 		<label>작성자</label> 
 		<input type="text" name="writer" value="${reply.writer}" style="width: 85%; margin-bottom: 10px; display: flex; margin-left: 6%;"/><br /> 
@@ -42,10 +42,27 @@ padding: 2px 15px 2px 15px;
 		<br />
 
 		<div class="modbtn" style="width: max-content; margin-left: auto; margin-right: auto;">
-		<button type="submit" class="btn">수정</button>
+		<button type="button" class="btn" onclick="javascript:pwInput()">수정</button>
 		<button type="button" class="btn" onclick="history.back()">취소</button>
 		</div>
 	</form>
+	<script>
+	function pwInput(){
+		var password = "${reply.password}";
+		var input = prompt("비밀번호를 입력하세요. [미설정 시 초기 비밀번호 : 1234]");
+			
+		
+		if (input == password) {
+			
+			document.getElementById('replyfrm').submit();
+		}
+		else {
+			alert("비밀번호가 일치하지 않습니다.");
+			
+		}
+		
+		}
+	</script>
 	</div>
 </body>
 </html>

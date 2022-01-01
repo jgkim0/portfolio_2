@@ -104,7 +104,7 @@
  	color: #000;
  	font-weight: 800;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 3px;
 	}
 	.table>tbody>tr>td{
 	font-size: .9rem;
@@ -140,6 +140,7 @@
 	</div>
 	<div class="search-table">
 	<h2>Board</h2>
+	<p style="font-size: 0.9em;">방명록 게시판입니다.</p>
 	<div class="div1">	
 	<div class="divA">
 		<select name="searchType" class="form-control">
